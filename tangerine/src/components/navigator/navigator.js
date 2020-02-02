@@ -81,29 +81,43 @@ class Navigator extends Component {
                     <hr/>
                     <div>
                         <Link
-                            to="/instances"
+                            to="/nations"
                             className='text-light pl-3'
                             // className={
-                            // window.location.pathname === "/instances" 
+                            // window.location.pathname === "/nations" 
                             //     ? "nav-link active" 
                             //     : "nav-link"
                             // }
                             >
-                            Instances
+                            National
                         </Link>
                     </div>
                     <hr/>
                     <div>
                         <Link
-                            to="/analytics"
+                            to="/globeMap"
                             className='text-light pl-3'
                             // className={
-                            // window.location.pathname === "/analytics"
+                            // window.location.pathname === "/globeMap"
                             //     ? "nav-link active"
                             //     : "nav-link"
                             // }
                         >
-                            Analytics
+                            Global
+                        </Link>
+                    </div>
+                    <hr/>
+                    <div>
+                        <Link
+                            to="/about"
+                            className='text-light pl-3'
+                            // className={
+                            // window.location.pathname === "/globeMap"
+                            //     ? "nav-link active"
+                            //     : "nav-link"
+                            // }
+                        >
+                            About
                         </Link>
                     </div>
                     <hr/>

@@ -26,10 +26,10 @@ class Card extends Component {
     }
     render() {
         return (
-            <div class="col-xl-4 col-sm-6">
+            <div class={this.props.size || "col-xl-4 col-sm-6"}>
                 <section 
-                    onMouseEnter={this.toggleInflation} 
-                    onMouseLeave={this.toggleInflation} 
+                    // onMouseEnter={this.toggleInflation} 
+                    // onMouseLeave={this.toggleInflation} 
                     className = {this.state.class}>
                     <div className='card mt-3 animated fadeInUp shadow'>
                         <div class="card-header">

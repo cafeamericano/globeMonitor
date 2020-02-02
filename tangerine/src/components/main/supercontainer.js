@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from '../home/home';
-import Analytics from '../analytics/analytics';
-import Instances from '../instances/instances';
+import GlobeMap from '../globeMap/globeMap';
+import Nations from '../nations/nations';
 import Navigator from '../navigator/navigator'
 import Header from './header'
+import NationPage from '../nations/nationPage'
 
 let supercontainerStyle = {
     position: 'relative',
 	width: '100%',
-	height: '100%'
+	height: '100%',
 }
 
 class Supercontainer extends Component {
@@ -43,8 +44,9 @@ class Supercontainer extends Component {
 						toggleVisibility_Navigator={this.toggleVisibility_Navigator}
 					/>
 					<Route exact path="/" component={Home} />
-					<Route exact path="/analytics" component={Analytics} />
-					<Route exact path="/instances" component={Instances} />
+					<Route exact path="/globeMap" component={GlobeMap} />
+					<Route exact path="/nations" component={Nations} />
+					<Route path="/nation/:regionCode/:nationName" component={NationPage} />
 				</Router>
 			</div>
 		);

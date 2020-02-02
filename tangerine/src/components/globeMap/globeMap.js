@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 import Graph from './graph';
 
-let analyticsStyle = {
+let globeMapStyle = {
     backgroundColor: '#81d4fa',
     height: '100%'
 }
-class Analytics extends Component {
+class GlobeMap extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -16,7 +16,7 @@ class Analytics extends Component {
 
     render() {
         return (
-            <div style={analyticsStyle} className='container-fluid'>
+            <div style={globeMapStyle} className='container-fluid'>
                 <div className='row animated fadeIn'>
                     <Graph/>
                 </div>
@@ -25,4 +25,4 @@ class Analytics extends Component {
     }
 }
 
-export default Analytics;
+export default GlobeMap;
