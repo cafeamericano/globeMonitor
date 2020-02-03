@@ -38,7 +38,8 @@ class Nations extends Component {
                         }/>
                     <Common.Card 
                         title='France' 
-                        key={2} 
+                        key={2}
+                        url='/nation/FR/France'
                         content={
                             <Link to='/nation/FR/France'>
                                 <Graph2 regionCode='FR'/>

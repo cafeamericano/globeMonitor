@@ -7,11 +7,12 @@ import Nations from '../nations/nations';
 import Navigator from '../navigator/navigator'
 import Header from './header'
 import NationPage from '../nations/nationPage'
+import About from '../about/about'
 
 let supercontainerStyle = {
     position: 'relative',
 	width: '100%',
-	height: '100%',
+	height: '100%'
 }
 
 class Supercontainer extends Component {
@@ -46,6 +47,7 @@ class Supercontainer extends Component {
 					<Route exact path="/" component={Home} />
 					<Route exact path="/globeMap" component={GlobeMap} />
 					<Route exact path="/nations" component={Nations} />
+					<Route exact path="/about" component={About} />
 					<Route path="/nation/:regionCode/:nationName" component={NationPage} />
 				</Router>
 			</div>
