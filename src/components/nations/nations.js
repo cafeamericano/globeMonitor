@@ -20,12 +20,14 @@ class Nations extends Component {
         return (
             <div className='container-fluid p-5' style={nationsStyle}>
                 <div className='row'>
-                    <Common.Card 
+                    <Common.Card
                         title='Germany' 
                         key={'DE'} 
                         content={
                             <Link to='/nation/DE/Germany'>
-                                <Graph2 regionCode='DE'/>
+                                <Graph2 
+                                    regionName='Germany'
+                                    regionCode='DE'/>
                             </Link>
                         }/>
                     <Common.Card 
@@ -33,7 +35,9 @@ class Nations extends Component {
                         key={1} 
                         content={
                             <Link to='/nation/GB/United_Kingdom'>
-                                <Graph2 regionCode='GB'/>
+                                <Graph2 
+                                    regionName='United Kingdom'
+                                    regionCode='GB'/>
                             </Link>
                         }/>
                     <Common.Card 
@@ -42,7 +46,9 @@ class Nations extends Component {
                         url='/nation/FR/France'
                         content={
                             <Link to='/nation/FR/France'>
-                                <Graph2 regionCode='FR'/>
+                                <Graph2 
+                                    regionName='France'
+                                    regionCode='FR'/>
                             </Link>
                         }/>
                     <Common.Card 
@@ -50,7 +56,9 @@ class Nations extends Component {
                         key={0} 
                         content={
                             <Link to='/nation/US/United_States'>
-                                <Graph2 regionCode='US'/>
+                                <Graph2 
+                                    regionName='United States'
+                                    regionCode='US'/>
                             </Link>
                         }/>
                 </div>

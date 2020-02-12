@@ -37,7 +37,7 @@ class NationPage extends Component {
         }
 
         return (
-            <div className='container-fluid p-5 animated fadeInUp' style={nationPageStyle}>
+            <div className='container-fluid p-5 animated fadeInRight' style={nationPageStyle}>
                 <h3 className='mt-3'>Data for {y}</h3>
                 <hr/>
                 <div className='row'>

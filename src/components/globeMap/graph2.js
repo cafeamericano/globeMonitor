@@ -22,41 +22,50 @@ class Graph extends Component {
         this.state = {};
     }
 
-  render() {
 
-    let data = [
-      ['Country',         'Population'  ],
-      ['Base',            0             ],
-      ['France',          65700000      ],
-      ['United Kingdom',  70000000      ],
-      ['Germany',         80000000      ],
-      ['United States',   300000000     ]
-    ]
+    componentDidMount = () => {
+      this.grabNationData();
+    }
 
-    let options = {
-      region: this.props.regionCode,
-      backgroundColor: '#81d4fa',
-      colorAxis: {colors: ['green']}
-    };
+    grabNationData() {
+        let url = `https://restcountries.eu/rest/v2/alpha/${this.props.regionCode}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(response => {
+                this.setState({
+                    nationData: response
+                });
+            });
+    }
 
-    return (
-      <div style={graphStyle}>
+    render() {
 
+      let options = {
+        region: this.props.regionCode,
+        backgroundColor: '#81d4fa',
+        colorAxis: {colors: ['green']}
+      };
 
-          
-            <Chart
-              chartType="GeoChart"
-              data={data}
-              options={options}
-              width="100%"
-              height="100%"
-              legendToggle
-            />
+      //If nation data exists, use that info in the chart
+      let presentableData = [];
+      presentableData.push(['Country', 'Population'])
+      this.state.nationData ? data.push([this.props.regionName, this.state.nationData.population]) : null;
 
+      return (
+        <div style={graphStyle}>
+            
+              <Chart
+                chartType="GeoChart"
+                data={presentableData}
+                options={options}
+                width="100%"
+                height="100%"
+                legendToggle
+              />
 
-      </div>
-    );
-  }
+        </div>
+      );
+    }
 }
 
 export default Graph;
