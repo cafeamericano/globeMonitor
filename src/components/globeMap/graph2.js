@@ -46,7 +46,7 @@ class Graph extends Component {
         colorAxis: {colors: ['green']}
       };
 
-      //If nation data exists, use that info in the chart
+      //If nation data exists, use that info in the chart; otherwise, set null
       let presentableData = [];
       presentableData.push(['Country', 'Population'])
       this.state.nationData ? data.push([this.props.regionName, this.state.nationData.population]) : null;
