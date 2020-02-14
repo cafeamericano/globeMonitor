@@ -13,23 +13,36 @@ class Graph extends Component {
         this.state = {};
     }
 
-  render() {
+  componentDidMount = () => {
+    this.pullAllWorldData();
+  }
+
+  pullAllWorldData = () => {
+    let url = `https://restcountries.eu/rest/v2/all`;
+    fetch(url)
+        .then(response => response.json())
+        .then(response => {
+
+          var populationArr = response.map(function (country) {
+            return [`${country.alpha2Code}`, country.population]
+          })
+          populationArr.unshift(['Country', 'Popularity'])
+
+          this.setState({
+              globalPopulations: populationArr,
+              allWorldData: response
+          });
+          
+        })
+  }
+
+  render = () => {
 
     return (
       <div style={graphStyle}>
         <Chart
           chartType="GeoChart"
-          data={
-            [
-              ['Country', 'Popularity'],
-              ['Germany', 200],
-              ['United States', 300],
-              ['Brazil', 400],
-              ['Canada', 500],
-              ['France', 600],
-              ['RU', 700]
-            ]
-          }
+          data={this.state.globalPopulations}
           options={
             {
               regionCode: 'this.props.regionCode',
