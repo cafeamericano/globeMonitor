@@ -32,7 +32,7 @@ class Nations extends Component {
                         }/>
                     <Common.Card 
                         title='United Kingdom' 
-                        key={1} 
+                        key={'UK'} 
                         content={
                             <Link to='/nation/GB/United_Kingdom'>
                                 <Graph2 
@@ -42,7 +42,7 @@ class Nations extends Component {
                         }/>
                     <Common.Card 
                         title='France' 
-                        key={2}
+                        key={'FR'}
                         url='/nation/FR/France'
                         content={
                             <Link to='/nation/FR/France'>
@@ -52,13 +52,56 @@ class Nations extends Component {
                             </Link>
                         }/>
                     <Common.Card 
+                        title='Spain' 
+                        key={'ES'}
+                        url='/nation/ES/Spain'
+                        content={
+                            <Link to='/nation/ES/Spain'>
+                                <Graph2 
+                                    regionName='Spain'
+                                    regionCode='ES'/>
+                            </Link>
+                        }/>
+                    <Common.Card 
+                        title='Japan' 
+                        key={'JP'}
+                        url='/nation/JP/Japan'
+                        content={
+                            <Link to='/nation/JP/Japan'>
+                                <Graph2 
+                                    regionName='Japan'
+                                    regionCode='JP'/>
+                            </Link>
+                        }/>
+                    <Common.Card 
                         title='United States' 
-                        key={0} 
+                        key={'US'} 
                         content={
                             <Link to='/nation/US/United_States'>
                                 <Graph2 
                                     regionName='United States'
                                     regionCode='US'/>
+                            </Link>
+                        }/>
+                    <Common.Card 
+                        title='United Kingdom' 
+                        key={'UK'} 
+                        content={
+                            <Link to='/nation/GB/United_Kingdom'>
+                                <Graph2 
+                                    regionName='United Kingdom'
+                                    regionCode='GB'/>
+                            </Link>
+                        }/>
+                    <Common.Card 
+                        title='Spain' 
+                        key={'ES'}
+                        url='/nation/ES/Spain'
+                        content={
+                            <Link to='/nation/ES/Spain'>
+                                <Graph2 
+                                    regionName='Spain'
+                                    regionCode='ES'/>
                             </Link>
                         }/>
                 </div>
